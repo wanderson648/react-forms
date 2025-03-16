@@ -1,12 +1,24 @@
-import "./App.css"
+import { useState } from "react";
+import "./App.css";
 
 export default function App() {
+  const [name, setName] = useState("");
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+  }
+
   return (
     <div>
-      <h1>Evento</h1>
+      <h1>Evento {name}</h1>
 
-      <form>
-        <input type="text" placeholder="Nome do evento" />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Nome do evento"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
         <span className="error">Nome é obrigatório</span>
 
         <input type="date" placeholder="Nome do evento" lang="pt-BR" />
@@ -27,5 +39,5 @@ export default function App() {
         <button type="submit">Salvar</button>
       </form>
     </div>
-  )
+  );
 }

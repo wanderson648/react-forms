@@ -12,7 +12,8 @@
   "dependencies": {
     "forms": "file:",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
